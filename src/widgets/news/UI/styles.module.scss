@@ -1,0 +1,143 @@
+.wrapper {
+  background: var(--primary-color-10);
+
+  padding: 2.25rem 1.5rem;
+  border-radius: .9375rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  @media (min-width: 992px) {
+    padding: 2.25rem;
+
+    flex-direction: row;
+    align-items: center;
+    gap: 5.75rem;
+  }
+}
+
+.image {
+  width: 100%;
+  object-fit: cover;
+  border-radius: .9375rem;
+
+  @media (min-width: 992px) {
+    width: 25rem;
+  }
+
+  @media (min-width: 1200px) {
+    width: 33.5rem;
+  }
+}
+
+.void {
+  border-radius: 555rem;
+  border: .025rem solid var(--identify-color-5);
+  width: 1.25rem;
+  height: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1 / 1;
+
+  & .circle {
+    display: none;
+  }
+}
+
+.circle {
+  width: .5rem;
+  height: .5rem;
+  aspect-ratio: 1 / 1;
+  border-radius: 555rem;
+  background: var(--identify-color-5);
+}
+
+.heading {
+  font-size: 1.0rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--additional-color-5);
+
+  @media (min-width: 576px) {
+    font-size: 1.5rem;
+    text-align: start;
+
+    & .danger {
+      display: none;
+    }
+
+    & .alpha {
+      color: var(--primary-color-15);
+    }
+  }
+}
+
+.content {
+  @include column(1.25rem);
+}
+
+.middle {
+  display: flex;
+  flex-direction: column;
+  gap: 1.0rem;
+
+  @media (min-width: 768px) {
+    display: grid;
+    gap: 1.0rem;
+    grid-template-areas: 'input button' 'approval approval';
+  }
+}
+
+.approval {
+  display: flex;
+  align-items: center;
+  gap: .625rem;
+
+  grid-area: approval;
+
+  & p {
+    font-size: .875rem;
+    color: var(--additional-color-10);
+    font-weight: 500;
+  }
+}
+
+.link {
+  text-decoration: underline;
+
+  & div {
+    display: none;
+  }
+}
+
+.approved {
+  & .circle {
+    display: block !important;
+  }
+}
+
+.button {
+  @include text-80;
+
+  background: var(--identify-color-5);
+  color: var(--primary-color-10);
+  border-radius: 500rem;
+  padding: 1.25rem;
+
+  transition: 200ms all ease-in-out;
+
+  grid-area: button;
+
+  width: 100%;
+
+  &:hover {
+    background: var(--identify-color-15);
+  }
+
+  @media (min-width: 768px) {
+    width: fit-content;
+    padding-block: .875rem;
+  }
+}

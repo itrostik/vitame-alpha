@@ -1,0 +1,197 @@
+.intro {
+  background: 50% 0% / 150% no-repeat fixed #ebedf0 url('/images/products-mobile-intro.jpg');
+
+  height: min(105vh, 30rem);
+
+  @media (min-width: 576px) {
+    background-size: 100%;
+  }
+
+  @media (min-width: 768px) {
+    background-position: top right;
+    background-image: url('/images/products-intro.jpg');
+  }
+
+  @media (min-width: 992px) {
+    background-size: 80%;
+  }
+
+  @media (min-width: 1200px) {
+    height: min(105vh, 35rem);
+  }
+
+  @media (min-width: 1600px) {
+    background-size: 60%;
+  }
+}
+
+.b2b {
+  padding: 200px 0 0;
+
+  background: 50% 250px / 191px 438px no-repeat fixed #fbfbfb url('/images/b2b-top-mobile.jpeg');
+
+  height: min(105vh, 45rem);
+
+  @media (max-width: 768px) {
+    background-attachment: fixed;
+  }
+
+  @media (min-width: 768px) {
+    padding: 180px 0 0;
+    background-position: 90% 120px;
+    background-size: 268px 615px;
+    height: min(105vh, 50rem);
+  }
+
+  //@media (min-height: 758px) and (max-width: 768px) {
+  //background-position: 50% 300px;
+  //}
+
+  @media (max-height: 648px) and (min-width: 768px) {
+    background-position: 90% 0;
+  }
+
+  @media (min-width: 1200px) {
+    background-position: 90% 120px;
+  }
+  @media (min-width: 1500px) {
+    padding: 280px 0 0;
+    background-position: 75% 120px;
+  }
+}
+
+.expanded {
+  background-image: url('/images/mobile-intro.jpg');
+  background-position: top right;
+  background-size: 110%;
+
+  @media (min-width: 576px) {
+    background-size: 90%;
+  }
+
+  @media (min-width: 768px) {
+    height: min(105vh, 45rem);
+  }
+
+  @media (min-width: 992px) {
+    height: min(105vh, 55rem);
+    background-position: top center;
+    background-size: cover;
+    background-image: url('/images/intro.jpg');
+  }
+
+  & .heading br {
+    display: inline;
+  }
+}
+
+.big {
+  @include text-15;
+}
+
+.desktop {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+  }
+}
+
+.intro > div {
+  @include column;
+
+  justify-content: space-between;
+  padding: 2rem 2rem 10rem;
+  border-radius: 1rem;
+  height: 100%;
+}
+
+.b2b > div {
+  @include column;
+  justify-content: space-between;
+  padding: 2rem 2rem 10rem;
+  border-radius: 1rem;
+  height: 100%;
+}
+
+.heading {
+  @include text-15;
+
+  color: var(--identify-color-5);
+  text-transform: uppercase;
+
+  & br {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    font-size: clamp(1.75rem, 7.5vw, 4.5rem);
+  }
+}
+
+.subheading {
+  @include text-20;
+
+  font-weight: 500; // reorder
+
+  text-transform: uppercase;
+
+  @media (min-width: 768px) {
+    color: var(--identify-color-5);
+  }
+}
+
+.content {
+  @include column(1rem);
+
+  user-select: none;
+
+  @media (min-width: 768px) {
+    gap: 2rem;
+  }
+}
+
+.items {
+  @include column(1rem);
+
+  @media (min-width: 768px) {
+    gap: 2rem;
+  }
+}
+
+.button {
+  @include text-40;
+
+  color: var(--identify-color-5);
+  border-radius: 555rem;
+  padding: 1.25rem 1.5rem;
+  width: 100%;
+  background: var(--primary-color-10);
+
+  @media (min-width: 768px) {
+    padding: 1.5rem 2.5rem;
+    width: fit-content;
+  }
+
+  transition: 200ms all ease-in-out;
+
+  &:hover {
+    background: var(--identify-color-5);
+    color: var(--primary-color-10);
+  }
+}
+
+.container {
+  max-width: 811px;
+}
+
+.text {
+  color: var(--identify-color-10);
+  font-size: 20px;
+  line-height: 130%;
+  font-weight: 500;
+  max-width: 642px;
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+}

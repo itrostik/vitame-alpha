@@ -1,0 +1,53 @@
+.problem {
+
+}
+
+.wrapper {
+  position: relative;
+}
+
+.cards {
+  position: relative;
+  display: grid;
+  gap: 1.0rem;
+  z-index: 20;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.first {
+  position: absolute;
+  top: -2.75rem;
+  right: 0;
+
+  @media (min-width: 992px) {
+    right: unset;
+    top: 3.35rem;
+    left: 8.0rem;
+  }
+}
+
+.second {
+  position: absolute;
+  bottom: -3.05rem;
+  left: 2.5rem;
+
+  width: 6.25rem;
+  height: 6.25rem;
+
+  @media (min-width: 992px) {
+    bottom: unset;
+    left: unset;
+    top: -3.85rem;
+    right: -2.95rem;
+    width: 7.5rem;
+    height: 7.5rem;
+    object-fit: contain;
+  }
+}

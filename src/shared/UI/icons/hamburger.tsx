@@ -1,0 +1,19 @@
+import React from 'react'
+
+const Hamburger = () => {
+    return (
+        <svg
+            width='24'
+            height='12'
+            viewBox='0 0 24 12'
+            fill='none'
+            xmlns='http://www.w3.org/2000/svg'
+        >
+            <rect width='24' height='2.4' rx='1.2' fill='black' />
+            <rect y='4.80002' width='24' height='2.4' rx='1.2' fill='black' />
+            <rect y='9.59998' width='24' height='2.4' rx='1.2' fill='black' />
+        </svg>
+    )
+}
+
+export default Hamburger

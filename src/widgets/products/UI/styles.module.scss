@@ -1,0 +1,37 @@
+.products {
+
+}
+
+.heading {
+  @include text-25;
+
+  text-transform: uppercase;
+}
+
+.content {
+  display: grid;
+  gap: 1.5rem;
+
+  @media (min-width: 700px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1400px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.container {
+  @include column(1.5rem);
+}
+
+.button {
+  @include text-75;
+
+  color: var(--additional-color-5);
+  text-transform: uppercase;
+  border-radius: 555rem;
+  padding: 1.875rem;
+  width: 100%;
+  background: var(--primary-color-10);
+}

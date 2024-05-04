@@ -1,0 +1,37 @@
+.navbar {
+  display: none;
+
+  @media (min-width: 992px) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.link {
+  @include text-50;
+
+  padding: .625rem .875rem;
+  text-transform: uppercase;
+
+  transition: 200ms all ease-in-out;
+
+  &:hover {
+    color: var(--identify-color-5);
+  }
+}
+
+.button {
+  @include text-65;
+
+  background: #1280E080;
+  border-radius: 500rem;
+  color: var(--primary-color-10);
+  padding: .625rem .875rem;
+  text-transform: uppercase;
+
+  transition: 200ms all ease-in-out;
+
+  &:not(:disabled):hover {
+    background: var(--identify-color-15);
+  }
+}

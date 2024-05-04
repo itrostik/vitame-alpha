@@ -1,0 +1,53 @@
+.navbar {
+  @include column(3.75rem);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: var(--transparent-color-25);
+  backdrop-filter: blur(.5rem);
+  z-index: 100;
+  padding: 8.5rem 2.0rem .5rem;
+  transition: 500ms all ease-in-out;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+.links {
+  @include column(.5rem);
+}
+
+.link {
+  @include text-50;
+
+  color: var(--additional-color-25);
+  padding: .625rem;
+  text-transform: uppercase;
+
+  transition: 200ms all ease-in-out;
+
+  &:hover {
+    color: var(--identify-color-5);
+  }
+}
+
+.button {
+  @include text-65;
+
+  background: #1280E080;
+  border-radius: 500rem;
+  color: var(--primary-color-5);
+  padding: .45rem .875rem;
+  text-transform: uppercase;
+  width: fit-content;
+  transition: 200ms all ease-in-out;
+
+  &:hover {
+    background: var(--identify-color-15);
+  }
+}

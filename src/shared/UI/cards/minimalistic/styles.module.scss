@@ -1,0 +1,20 @@
+.card {
+  @include column(1.25rem);
+
+  background: #FFFFFFCC;
+  padding: 1.5rem;
+  border-radius: .935rem;
+  box-shadow: 0 0 1.5rem #00000005;
+  backdrop-filter: blur(.5rem);
+}
+
+.heading {
+  @include text-65;
+
+  color: var(--identify-color-5);
+}
+
+.image {
+  height: 5rem;
+  width: auto;
+}

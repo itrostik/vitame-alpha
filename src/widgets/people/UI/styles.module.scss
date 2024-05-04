@@ -1,0 +1,46 @@
+.cards {
+  display: grid;
+  gap: 1.5rem;
+
+  @media (min-width: 576px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.image {
+  border-radius: .935rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card {
+  @include column(1.0rem);
+
+  background: var(--primary-color-10);
+  padding: 1.5rem;
+  border-radius: .935rem;
+
+  height: 100%;
+}
+
+.content {
+  @include column(1.0rem);
+}
+
+.description {
+  @include column(.5rem);
+}
+
+.heading {
+  @include text-90;
+
+  color: var(--identify-color-5);
+}
+
+.text {
+  @include text-45;
+}

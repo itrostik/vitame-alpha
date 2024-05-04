@@ -1,0 +1,141 @@
+.section {
+  padding: 0 16px;
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  @media (max-width: 992px) {
+    gap: 0;
+  }
+}
+.title {
+  text-align: center;
+  font-weight: 500;
+  font-size: 84px;
+  color: var(--identify-color-5);
+  text-transform: uppercase;
+  @media (max-width: 1150px) {
+    font-size: 64px;
+  }
+  @media (max-width: 992px) {
+    font-size: 42px;
+  }
+}
+
+.content {
+  padding: 83px 0 33px;
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 992px) {
+    padding: 46px 0 300px;
+  }
+}
+.bg {
+  @media (max-width: 992px) {
+    width: 618px;
+    height: 420px;
+  }
+}
+.vitamit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  @media (max-width: 992px) {
+    width: 210px;
+    top: 46%;
+    height: auto;
+  }
+}
+
+.shadow {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  @media (max-width: 992px) {
+    width: 598px;
+    height: 33px;
+    bottom: 120px;
+  }
+}
+
+.desktop {
+  z-index: 15;
+  @media (max-width: 992px) {
+    display: none;
+  }
+}
+.mobile {
+  display: none;
+  z-index: 15;
+  position: absolute;
+  top: 560px;
+  @media (max-width: 992px) {
+    display: block;
+    width: min(100%, 1320px);
+    margin: 0 auto;
+  }
+}
+.block {
+  position: absolute;
+}
+.card {
+  backdrop-filter: blur(8px);
+  background-color: rgba(256, 256, 256, 0.9);
+  box-shadow: 3px 3px 20px 0 rgba(0, 0, 0, 0.04);
+  padding: 24px;
+  border-radius: 15px;
+  max-width: 420px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  @media (max-width: 992px) {
+    width: 328px;
+    flex: 0 0 auto;
+    min-width: 0;
+  }
+}
+.name {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  color: var(--identify-color-5);
+}
+.text {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 130%;
+  color: var(--identify-color-10);
+}
+.link {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 130%;
+  color: var(--identify-color-5);
+}
+
+.carousel {
+  backface-visibility: hidden;
+  display: flex;
+  gap: 10px;
+  touch-action: pan-y;
+  align-items: flex-start;
+}
+.images {
+  display: flex;
+  gap: 10px;
+}
+.image {
+  width: auto;
+  height: 98px;
+  border-radius: 8px;
+}

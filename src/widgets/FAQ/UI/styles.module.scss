@@ -1,0 +1,53 @@
+.description {
+  @include column(.5rem);
+}
+
+.questions {
+  @include column(.5rem);
+
+  overflow: hidden;
+}
+
+.item {
+  background: var(--primary-color-10);
+  padding: 1.5rem;
+  border-radius: .9375rem;
+
+  width: 100%;
+
+  user-select: none;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.question {
+  @include text-60;
+
+  width: 70%;
+  text-transform: uppercase;
+}
+
+.button {
+  font-size: 2.5rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 555rem;
+  background: var(--primary-color-5);
+  position: relative;
+  z-index: 10;
+}
+
+.answer {
+  @include text-70;
+}
+
+.opened {
+  margin-top: 1.5rem;
+}

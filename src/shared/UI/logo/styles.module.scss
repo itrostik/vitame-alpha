@@ -1,0 +1,16 @@
+.logo {
+  @include text-50;
+
+  text-transform: uppercase;
+  padding: .625rem;
+
+  & img {
+    width: 4.375rem;
+    height: 1.25rem;
+
+    @media (min-width: 768px) {
+      width: 5.625rem;
+      height: 1.5625rem;
+    }
+  }
+}

@@ -1,0 +1,146 @@
+// Default
+
+@mixin text-5 {
+  font-size: 1.0rem;
+  line-height: 135%;
+}
+
+@mixin text-10 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+@mixin text-65 {
+  font-size: 1.0rem;
+  font-weight: 500;
+  line-height: 135%;
+}
+
+// Cards
+
+@mixin text-70 {
+  font-size: 1.125rem;
+  line-height: 135%;
+}
+
+@mixin text-55 {  // Title / Minimalistic
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+@mixin text-60 {  // Title / Visual
+  font-size: 1.0rem;
+  font-weight: 500;
+  line-height: 120%;
+
+  @media (min-width: 768px) {
+    font-size: 1.5rem;
+  }
+}
+
+// Button
+
+@mixin text-40 {
+  font-size: .875rem;
+  font-weight: 600;
+  line-height: 120%;
+
+  @media (min-width: 768px) {
+    font-size: 1.0rem;
+  }
+}
+
+// Person card
+
+@mixin text-45 {  // Title
+  font-size: .875rem;
+  font-weight: 500;
+}
+
+// Logo, Navbar links
+
+@mixin text-50 {
+  font-size: 1.0rem;
+  font-weight: 500;
+  line-height: 100%;
+}
+
+// Headings
+
+@mixin text-15 { // H1
+  font-size: 1.75rem;
+  font-weight: 500;
+  line-height: 100%;
+
+  @media (min-width: 1200px) {
+    font-size: 4.5rem;
+  }
+}
+
+@mixin text-20 {  // Subheading
+  line-height: 120%;
+
+  @media (min-width: 1200px) {
+    font-size: 1.5rem;
+  }
+}
+
+@mixin text-25 {  // H2
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 120%;
+
+  @media (min-width: 768px) {
+    font-size: 2.0rem;
+  }
+}
+
+@mixin text-30 {  // H3
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+@mixin text-75 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 140%;
+}
+
+
+@mixin text-80 {
+  font-size: 1.0rem;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+@mixin text-85 {
+  font-size: 3.0rem;
+  font-weight: 500;
+  letter-spacing: -.035rem;
+  line-height: 120%;
+}
+
+@mixin text-90 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 130%;
+}
+
+@mixin text-95 {
+  font-size: .875rem;
+  font-weight: 500;
+  line-height: 140%;
+}
+
+@mixin text-100 {
+  font-size: .875rem;
+  font-weight: 400;
+  line-height: 135%;
+
+  @media (min-width: 768px) {
+    font-size: 1.0rem;
+  }
+}

@@ -1,0 +1,16 @@
+.section > div {
+  @include column(2.25rem);
+}
+
+.heading {
+  @include text-25;
+
+  color: var(--identify-color-5);
+  text-transform: uppercase;
+}
+
+.wrapper {
+  @media (min-width: 768px) {
+    padding-left: 2.0rem;
+  }
+}

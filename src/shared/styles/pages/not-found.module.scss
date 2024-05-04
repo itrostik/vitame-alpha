@@ -1,0 +1,103 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  min-height: 100vh;
+}
+
+.main {
+  @include column(1.0rem);
+
+  flex: 1;
+  background: var(--transparent-color-15);
+  padding: 3.5rem 1.0rem 3.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: 1600px) {
+    padding-inline: 5.25rem;
+  }
+}
+
+.container {
+  width: min(100%, 1320px);
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.subheading {
+  text-transform: uppercase;
+  font-size: 3.0rem;
+  font-weight: 500;
+  color: var(--additional-color-5);
+  width: fit-content;
+
+  @media (min-width: 992px) {
+    font-size: 4.0rem;
+  }
+}
+
+.heading {
+  text-transform: uppercase;
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: var(--identify-color-5);
+  width: fit-content;
+
+  @media (min-width: 992px) {
+    font-size: 4.5rem;
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  margin-top: 2.0rem;
+
+  & button {
+    font-size: .875rem;
+    font-weight: 600;
+    padding: 1.0rem 2.5rem;
+    border-radius: .5rem;
+    width: 100%;
+    transition: 300ms all ease-in-out;
+
+    @media (min-width: 768px) {
+      width: fit-content;
+    }
+  }
+
+  & button:first-child {
+    background: var(--identify-color-5);
+    color: var(--primary-color-5);
+    border: .0875rem solid var(--identify-color-5);
+
+    &:hover {
+      background: var(--identify-color-15);
+      border-color: var(--identify-color-15);
+      color: var(--primary-color-5);
+    }
+  }
+
+  & button:last-child {
+    background: transparent;
+    color: var(--identify-color-5);
+    border: .0875rem solid var(--identify-color-5);
+
+    &:hover {
+      background: var(--identify-color-15);
+      border-color: var(--identify-color-15);
+      color: var(--primary-color-5);
+    }
+  }
+
+  @media (min-width: 768px) {
+    margin-top: 2.25rem;
+    flex-direction: row;
+    gap: .875rem;
+  }
+}
