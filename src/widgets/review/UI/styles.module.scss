@@ -1,116 +1,118 @@
 .container {
-    width: min(100%, 1320px);
-    margin: 0 auto;
+  width: min(100%, 1320px);
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 3.5rem 1rem 3.5rem;
 }
 
 .wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 .top {
-    padding-left: 32px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    @media (max-width: 992px) {
-        padding-left: 0;
-    }
+  padding-left: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media (max-width: 992px) {
+    padding-left: 0;
+  }
 }
 .title {
-    font-weight: 600;
-    color: var(--identify-color-5);
-    text-transform: uppercase;
-    font-size: 36px;
-    line-height: 130%;
-    @media (max-width: 576px) {
-        font-size: 20px;
-    }
+  font-weight: 600;
+  color: var(--identify-color-5);
+  text-transform: uppercase;
+  font-size: 36px;
+  line-height: 130%;
+  @media (max-width: 576px) {
+    font-size: 20px;
+  }
 }
 .arrow {
-    display: flex;
-    gap: 4px;
-    @media (max-width: 576px) {
-        display: none;
-    }
+  display: flex;
+  gap: 4px;
+  @media (max-width: 576px) {
+    display: none;
+  }
 }
 .btn {
-    width: 46px;
-    height: 46px;
-    border-radius: 8px;
-    background-color: #fff;
-    box-shadow: 0 1px 12px 0 rgba(11, 17, 20, 0.1);
-    &:disabled {
-        path {
-            fill: #a1a1a1;
-            stroke: #a1a1a1;
-            opacity: 50%;
-            cursor: not-allowed;
-        }
+  width: 46px;
+  height: 46px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 1px 12px 0 rgba(11, 17, 20, 0.1);
+  &:disabled {
+    path {
+      fill: #a1a1a1;
+      stroke: #a1a1a1;
+      opacity: 50%;
+      cursor: not-allowed;
     }
+  }
 }
 .carousel {
-    backface-visibility: hidden;
-    display: flex;
-    gap: 16px;
-    touch-action: pan-y;
-    @media (max-width: 576px) {
-        gap: 10px;
-    }
+  backface-visibility: hidden;
+  display: flex;
+  gap: 16px;
+  touch-action: pan-y;
+  @media (max-width: 576px) {
+    gap: 10px;
+  }
 }
 .item {
-    flex: 0 0 auto;
-    min-width: 0;
-    padding: 24px;
-    border-radius: 15px;
-    max-width: 740px;
-    display: flex;
-    gap: 24px;
-    align-items: flex-start;
-    background-color: #fff;
-    @media (max-width: 992px) {
-        max-width: 540px;
-    }
-    @media (max-width: 576px) {
-        max-width: 262px;
-        padding: 16px;
-        gap: 16px;
-        flex-direction: column;
-    }
+  flex: 0 0 auto;
+  min-width: 0;
+  padding: 24px;
+  border-radius: 15px;
+  max-width: 740px;
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  background-color: #fff;
+  @media (max-width: 992px) {
+    max-width: 540px;
+  }
+  @media (max-width: 576px) {
+    max-width: 262px;
+    padding: 16px;
+    gap: 16px;
+    flex-direction: column;
+  }
 }
 .image {
-    border-radius: 15px;
-    @media (max-width: 576px) {
-        width: 230px;
-        height: auto;
-    }
+  border-radius: 15px;
+  @media (max-width: 576px) {
+    width: 230px;
+    height: auto;
+  }
 }
 .name {
-    font-weight: 600;
-    font-size: 18px;
-    color: #000;
-    margin-bottom: 8px;
-    line-height: 130%;
-    @media (max-width: 576px) {
-        margin-bottom: 6px;
-    }
+  font-weight: 600;
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 8px;
+  line-height: 130%;
+  @media (max-width: 576px) {
+    margin-bottom: 6px;
+  }
 }
 .company {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 140%;
-    color: var(--additional-color-10);
-    margin-bottom: 12px;
-    @media (max-width: 576px) {
-        margin-bottom: 10px;
-    }
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  color: var(--additional-color-10);
+  margin-bottom: 12px;
+  @media (max-width: 576px) {
+    margin-bottom: 10px;
+  }
 }
 .content {
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 120%;
-    color: var(--additional-color-10);
-    @media (max-width: 576px) {
-        font-size: 14px;
-    }
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 120%;
+  color: var(--additional-color-10);
+  @media (max-width: 576px) {
+    font-size: 14px;
+  }
 }
