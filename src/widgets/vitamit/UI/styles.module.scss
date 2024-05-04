@@ -12,6 +12,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-height: 700px) {
+    top: 20%;
+  }
 }
 .vitamit {
   position: absolute;
@@ -21,10 +24,23 @@
   z-index: 10;
   width: 340px;
   height: auto;
+  @media (max-height: 700px) {
+    top: 50%;
+    width: 200px;
+  }
 }
 .shadow {
   position: absolute;
   bottom: -50px;
+  @media (max-height: 700px) {
+    bottom: 50px;
+  }
+}
+.bg {
+  @media (max-height: 700px) {
+    width: 900px;
+    height: auto;
+  }
 }
 
 .card {

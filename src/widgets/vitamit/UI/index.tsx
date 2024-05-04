@@ -8,7 +8,7 @@ const list: {
   description: string
   link: { text: string; url: string } | null
   images: string[]
-  top: number
+  top: string
   pos: number
   dir: 'left' | 'right'
 }[] = [
@@ -19,7 +19,7 @@ const list: {
     link: { text: 'Перейти в каталог', url: '/products' },
     dir: 'left',
     images: [],
-    top: 52,
+    top: '5%',
     pos: 165
   },
   {
@@ -29,7 +29,7 @@ const list: {
     link: null,
     dir: 'right',
     images: [],
-    top: 27,
+    top: '2%',
     pos: 147
   },
   {
@@ -39,7 +39,7 @@ const list: {
     link: null,
     dir: 'right',
     images: ['cup-1.jpg', 'cup-2.jpg'],
-    top: 310,
+    top: '32%',
     pos: 156
   },
   {
@@ -48,7 +48,7 @@ const list: {
     link: null,
     dir: 'left',
     images: ['container-1.jpg', 'container-2.jpg'],
-    top: 540,
+    top: '56%',
     pos: 165
   },
   {
@@ -58,7 +58,7 @@ const list: {
     link: null,
     dir: 'right',
     images: [],
-    top: 562,
+    top: '68%',
     pos: 111
   }
 ]
