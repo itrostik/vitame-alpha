@@ -20,7 +20,7 @@
 }
 .vitamit {
   position: absolute;
-  top: 50%;
+  top: 33%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
@@ -29,7 +29,7 @@
 }
 .shadow {
   position: absolute;
-  bottom: 100px;
+  bottom: 160px;
   overflow: hidden;
 }
 .bg {
@@ -38,7 +38,7 @@
 .block {
   overflow: hidden;
   position: absolute;
-  bottom: -120px;
+  bottom: 0px;
   height: 300px;
   width: 100%;
   z-index: 52;
