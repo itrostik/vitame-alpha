@@ -117,7 +117,7 @@ const Vitamit = () => {
           className={styles.bg}
         />
         <Image
-          src='/images/vitamit.jpg'
+          src='/images/vitamit.png'
           alt='Vitamit'
           width={370}
           height={850}
