@@ -76,3 +76,13 @@
   line-height: 130%;
   color: var(--identify-color-5);
 }
+
+.title {
+  font-size: 84px;
+  color: var(--identify-color-5);
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 64px;
+  position: sticky;
+  top: 70px;
+}

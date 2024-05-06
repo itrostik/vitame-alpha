@@ -20,7 +20,7 @@ const list: {
     dir: 'left',
     images: [],
     top: '5%',
-    pos: 165
+    pos: 152
   },
   {
     title: 'Терминал',
@@ -49,7 +49,7 @@ const list: {
     dir: 'left',
     images: ['container-1.jpg', 'container-2.jpg'],
     top: '56%',
-    pos: 165
+    pos: 152
   },
   {
     title: 'Контроллер',
@@ -76,7 +76,7 @@ const Vitamit = () => {
       if (cur < 0) cur = 0
     }
     const b: CSSProperties = {
-      top: list[index].top,
+      top: `calc(${list[index].top} + ${cur > 100 ? 0 : 100 - cur}px)`,
       opacity: (cur / 100).toFixed(2)
     }
     if (list[index].dir === 'right') {
@@ -108,6 +108,7 @@ const Vitamit = () => {
   }, [curScrollPosition])
   return (
     <section className={styles.section} ref={sectionRef}>
+      <h2 className={styles.title}>Что есть в витамате</h2>
       <div className={styles.content}>
         <Image
           src='/images/vitamit-bg.png'

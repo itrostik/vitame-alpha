@@ -45,7 +45,7 @@ const list: {
 ]
 
 const VitamitMobile = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({
+  const [emblaRef] = useEmblaCarousel({
     startIndex: 0
   })
   return (
