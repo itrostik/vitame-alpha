@@ -1,9 +1,7 @@
 import styles from './styles.module.scss'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useEffect, useRef, useState } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
-import AutoHeight from 'embla-carousel-auto-height'
 const list: {
   title: string
   description: string
@@ -47,41 +45,12 @@ const list: {
 ]
 
 const VitamitMobile = () => {
-  const [curScrollPosition, setCurScrollPosition] = useState(0)
-  const [value, setValue] = useState(0)
-  const [emblaRef, emblaApi] = useEmblaCarousel(
-    {
-      startIndex: 0
-    },
-    [AutoHeight()]
-  )
-  const sectionRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const callback = () => {
-      setCurScrollPosition(window.scrollY)
-    }
-
-    window.addEventListener('scroll', callback)
-  }, [])
-
-  useEffect(() => {
-    if (!sectionRef.current) return
-    const rect = sectionRef.current!.getBoundingClientRect()
-    if (rect.top < 0 && rect.bottom > window.innerHeight) {
-      const h = rect.height - window.innerHeight
-      const real = Math.abs(rect.top)
-      let f = Math.floor((500 * real) / h)
-      let i = 0
-      while (f > 100) {
-        f -= 100
-        i++
-      }
-      emblaApi?.scrollTo(i)
-    }
-  }, [curScrollPosition])
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    startIndex: 0
+  })
   return (
-    <section className={styles.section} ref={sectionRef}>
+    <section className={styles.section}>
+      <h2 className={styles.title}>Что есть в витамате</h2>
       <div className={styles.content}>
         <div className={styles.hidden}>
           <Image
@@ -107,44 +76,41 @@ const VitamitMobile = () => {
           />
         </div>
 
-        <div className={styles.block}>
-          <div className={styles.viewport} ref={emblaRef}>
-            <div className={styles.carousel}>
-              {list.map((card, i) => {
-                return (
-                  <div key={i} className={styles.card}>
-                    <h3 className={styles.name}>{card.title}</h3>
-                    <div className={styles.text}>{card.description}</div>
-                    {card.link && (
-                      <Link href={card.link.url} className={styles.link}>
-                        {card.link.text}
-                      </Link>
-                    )}
-                    {card.images.length > 0 && (
-                      <div className={styles.images}>
-                        {card.images.map((e) => {
-                          return (
-                            <Image
-                              key={e}
-                              src={'/images/' + e}
-                              alt='image'
-                              width={0}
-                              height={0}
-                              sizes='100vw'
-                              className={styles.image}
-                            />
-                          )
-                        })}
-                      </div>
-                    )}
-                  </div>
-                )
-              })}
-            </div>
+        <div className={styles.viewport} ref={emblaRef}>
+          <div className={styles.carousel}>
+            {list.map((card, i) => {
+              return (
+                <div key={i} className={styles.card}>
+                  <h3 className={styles.name}>{card.title}</h3>
+                  <div className={styles.text}>{card.description}</div>
+                  {card.link && (
+                    <Link href={card.link.url} className={styles.link}>
+                      {card.link.text}
+                    </Link>
+                  )}
+                  {card.images.length > 0 && (
+                    <div className={styles.images}>
+                      {card.images.map((e) => {
+                        return (
+                          <Image
+                            key={e}
+                            src={'/images/' + e}
+                            alt='image'
+                            width={0}
+                            height={0}
+                            sizes='100vw'
+                            className={styles.image}
+                          />
+                        )
+                      })}
+                    </div>
+                  )}
+                </div>
+              )
+            })}
           </div>
         </div>
       </div>
-      <div className={styles.empty}></div>
     </section>
   )
 }
