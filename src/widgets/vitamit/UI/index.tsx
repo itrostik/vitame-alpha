@@ -2,14 +2,16 @@
 import styles from './styles.module.scss'
 import Image from 'next/image'
 import Link from 'next/link'
-import { CSSProperties, useEffect, useRef, useState } from 'react'
+import { CSSProperties } from 'react'
+import { motion } from 'framer-motion'
+
 const list: {
   title: string
   description: string
   link: { text: string; url: string } | null
   images: string[]
   top: string
-  pos: number
+  pos: string
   dir: 'left' | 'right'
 }[] = [
   {
@@ -20,7 +22,7 @@ const list: {
     dir: 'left',
     images: [],
     top: '5%',
-    pos: 152
+    pos: '17%'
   },
   {
     title: 'Терминал',
@@ -30,7 +32,7 @@ const list: {
     dir: 'right',
     images: [],
     top: '2%',
-    pos: 147
+    pos: '17%'
   },
   {
     title: 'Стаканчики',
@@ -40,7 +42,7 @@ const list: {
     dir: 'right',
     images: ['cup-1.jpg', 'cup-2.jpg'],
     top: '32%',
-    pos: 156
+    pos: '17%'
   },
   {
     title: 'Таблетницы',
@@ -49,7 +51,7 @@ const list: {
     dir: 'left',
     images: ['container-1.jpg', 'container-2.jpg'],
     top: '56%',
-    pos: 152
+    pos: '17%'
   },
   {
     title: 'Контроллер',
@@ -59,55 +61,26 @@ const list: {
     dir: 'right',
     images: [],
     top: '68%',
-    pos: 111
+    pos: '18%'
   }
 ]
 
 const Vitamit = () => {
-  const sectionRef = useRef<HTMLDivElement>(null)
-  const [opacity, setOpacity] = useState(0)
-  const [curScrollPosition, setCurScrollPosition] = useState(0)
   const getStyle = (index: number): CSSProperties => {
-    let cur = opacity
-    let i = index
-    while (i > 0) {
-      i--
-      cur -= 100
-      if (cur < 0) cur = 0
-    }
     const b: CSSProperties = {
-      top: `calc(${list[index].top} + ${cur > 100 ? 0 : 100 - cur}px)`,
-      opacity: (cur / 100).toFixed(2)
+      top: list[index].top
     }
-    if (list[index].dir === 'right') {
-      b.left = `calc(50% + ${list[index].pos}px)`
-    } else {
-      b.right = `calc(50% + ${list[index].pos}px)`
-    }
+    // if (list[index].dir === 'right') {
+    //   b.right = `calc(50% - ${list[index].pos})`
+    // }
+    // else {
+    //   b.left = list[index].pos
+    // }
     return b
   }
 
-  useEffect(() => {
-    const callback = () => {
-      setCurScrollPosition(window.scrollY)
-    }
-
-    window.addEventListener('scroll', callback)
-  }, [])
-
-  useEffect(() => {
-    if (!sectionRef.current) return
-    let cur = opacity
-    const rect = sectionRef.current!.getBoundingClientRect()
-    if (rect.top < 0 && rect.bottom > window.innerHeight) {
-      const h = rect.height - window.innerHeight
-      const real = Math.abs(rect.top)
-      cur = Math.floor((500 * real) / h)
-      setOpacity(cur)
-    }
-  }, [curScrollPosition])
   return (
-    <section className={styles.section} ref={sectionRef}>
+    <section className={styles.section}>
       <h2 className={styles.title}>Что есть в витамате</h2>
       <div className={styles.content}>
         <Image
@@ -133,7 +106,15 @@ const Vitamit = () => {
         />
         {list.map((card, i) => {
           return (
-            <div key={i} className={styles.card} style={getStyle(i)}>
+            <motion.div
+              initial={{ opacity: 0, y: '100%' }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              key={i}
+              className={styles.card}
+              style={getStyle(i)}
+            >
               <h3 className={styles.name}>{card.title}</h3>
               <div className={styles.text}>{card.description}</div>
               {card.link && (
@@ -141,11 +122,10 @@ const Vitamit = () => {
                   {card.link.text}
                 </Link>
               )}
-            </div>
+            </motion.div>
           )
         })}
       </div>
-      <div className={styles.empty}></div>
     </section>
   )
 }
