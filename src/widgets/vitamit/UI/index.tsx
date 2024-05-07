@@ -22,7 +22,7 @@ const list: {
     dir: 'left',
     images: [],
     top: '5%',
-    pos: '17%'
+    pos: '0%'
   },
   {
     title: 'Терминал',
@@ -32,7 +32,7 @@ const list: {
     dir: 'right',
     images: [],
     top: '2%',
-    pos: '17%'
+    pos: '0'
   },
   {
     title: 'Стаканчики',
@@ -42,7 +42,7 @@ const list: {
     dir: 'right',
     images: ['cup-1.jpg', 'cup-2.jpg'],
     top: '32%',
-    pos: '17%'
+    pos: '1%'
   },
   {
     title: 'Таблетницы',
@@ -51,7 +51,7 @@ const list: {
     dir: 'left',
     images: ['container-1.jpg', 'container-2.jpg'],
     top: '56%',
-    pos: '17%'
+    pos: '0%'
   },
   {
     title: 'Контроллер',
@@ -61,7 +61,7 @@ const list: {
     dir: 'right',
     images: [],
     top: '68%',
-    pos: '18%'
+    pos: '1%'
   }
 ]
 
@@ -70,12 +70,11 @@ const Vitamit = () => {
     const b: CSSProperties = {
       top: list[index].top
     }
-    // if (list[index].dir === 'right') {
-    //   b.right = `calc(50% - ${list[index].pos})`
-    // }
-    // else {
-    //   b.left = list[index].pos
-    // }
+    if (list[index].dir === 'right') {
+      b.right = list[index].pos
+    } else {
+      b.left = list[index].pos
+    }
     return b
   }
 
