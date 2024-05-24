@@ -22,32 +22,30 @@ import useFormStore from '@/widgets/form/model/store'
 import useNotificationStore from '@/widgets/notification/model/store'
 
 interface Props extends LayoutProps {
-    page: 'home' | 'products' | 'identity' | 'b2b'
+  page: 'home' | 'products' | 'identity' | 'partnership' | 'blog'
 }
 
 const Wrapper = ({ children, page }: Props) => {
-    const { isCookieHidden, setIsCookieHidden } = useCookieStore()
-    const { isFormHidden, setIsFormHidden } = useFormStore()
-    const { isNotificationHidden, setIsNotificationHidden } = useNotificationStore()
+  const { isCookieHidden, setIsCookieHidden } = useCookieStore()
+  const { isFormHidden, setIsFormHidden } = useFormStore()
+  const { isNotificationHidden, setIsNotificationHidden } = useNotificationStore()
 
-    return (
-        <div className={styles.wrapper}>
-            <Header />
-            <Navigation />
-            <Modal isHidden={isFormHidden} setIsHidden={setIsFormHidden}>
-                <Form />
-            </Modal>
-            <Modal isHidden={isNotificationHidden} setIsHidden={setIsNotificationHidden}>
-                <Notification />
-            </Modal>
-            <Cookie />
-            <Intro page={page} />
-            <main className={cn(styles.main, { [styles.expanded]: page === 'home' })}>
-                {children}
-            </main>
-            <Footer />
-        </div>
-    )
+  return (
+    <div className={styles.wrapper}>
+      <Header />
+      <Navigation />
+      <Modal isHidden={isFormHidden} setIsHidden={setIsFormHidden}>
+        <Form />
+      </Modal>
+      <Modal isHidden={isNotificationHidden} setIsHidden={setIsNotificationHidden}>
+        <Notification />
+      </Modal>
+      <Cookie />
+      <Intro page={page} />
+      <main className={cn(styles.main, { [styles.expanded]: page === 'home' })}>{children}</main>
+      <Footer />
+    </div>
+  )
 }
 
 export default Wrapper

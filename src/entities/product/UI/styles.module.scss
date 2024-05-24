@@ -1,9 +1,9 @@
 .product {
   @include column(1.5rem);
 
-  padding: 2.0rem;
+  padding: 2rem;
   background: var(--primary-color-10);
-  border-radius: .935rem;
+  border-radius: 0.935rem;
   width: 100%;
   cursor: pointer;
 }
@@ -23,7 +23,7 @@
 }
 
 .description {
-  @include column(.75rem);
+  @include column(0.75rem);
 }
 
 .brief {
@@ -40,8 +40,8 @@
 
 .close {
   position: absolute;
-  top: 1.0rem;
-  right: 1.0rem;
+  top: 1rem;
+  right: 1rem;
 }
 
 .title {
@@ -56,7 +56,7 @@
   background: var(--identify-color-5);
   color: var(--primary-color-10);
   border-radius: 500rem;
-  padding: .875rem 1.5rem;
+  padding: 0.875rem 1.5rem;
   width: fit-content;
 
   transition: 200ms all ease-in-out;
@@ -88,14 +88,15 @@
   justify-content: center;
   align-items: center;
   z-index: 150;
-  padding: .8125rem;
+  padding: 0.8125rem;
 }
 
 .dots {
-  display: flex;
+  transition: 200ms all ease-in-out;
+  display: none;
   transform: translateY(-100%);
   justify-content: center;
-  padding-bottom: .75rem;
+  padding-bottom: 0.75rem;
 
   @media (min-width: 992px) {
     padding-bottom: 1.5rem;
@@ -103,13 +104,13 @@
 }
 
 .dot-wrapper {
-  padding: .25rem .5rem;
+  padding: 0.25rem 0.5rem;
 }
 
 .dot {
-  width: .625rem;
-  height: .625rem;
-  background-color: #0414214D;
+  width: 0.625rem;
+  height: 0.625rem;
+  background-color: #0414214d;
   border: none;
   border-radius: 50%;
 }
@@ -118,12 +119,17 @@
   background-color: #041320;
 }
 
-
 .viewport {
   overflow: hidden;
   height: fit-content;
-  border-radius: 1.0rem;
+  border-radius: 1rem;
   aspect-ratio: 1 / 1;
+
+  &:hover {
+    .dots {
+      display: flex;
+    }
+  }
 }
 
 .tape {
@@ -137,7 +143,7 @@
 }
 
 .modal {
-  @include column(1.0rem);
+  @include column(1rem);
 
   border-radius: 1.5rem;
   background: var(--primary-color-10);
@@ -154,7 +160,7 @@
 }
 
 .mini {
-  @include column(.5rem);
+  @include column(0.5rem);
 }
 
 .image {
@@ -179,19 +185,16 @@
 }
 
 .title {
-
 }
 
 .description {
-
 }
 
 .text {
-
 }
 
 .items {
-  @include column(.5rem);
+  @include column(0.5rem);
 
   @media (min-width: 992px) {
     width: min-content;
@@ -221,7 +224,7 @@
 
   font-weight: 600;
 
-  padding: .635rem .875rem;
+  padding: 0.635rem 0.875rem;
   border-radius: 555rem;
   white-space: nowrap;
 }
@@ -235,7 +238,7 @@
   @include text-95;
 
   padding-block: 1.5rem 0;
-  border-radius: .975rem;
+  border-radius: 0.975rem;
 }
 
 .hidden {

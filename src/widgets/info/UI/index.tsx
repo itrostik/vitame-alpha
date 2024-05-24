@@ -40,7 +40,7 @@ const Info = ({ variantWithButton = false }: Props) => {
       <div className={styles.container}>
         <div className={styles.wrapper}>
           <div className={styles.left}>
-            <h2 className={styles.title}>Готовое решение для здоровья ваших сотрудников</h2>
+            <h2 className={styles.title}>Качество и безопасность – наш приоритет</h2>
             <div className={styles.content}>
               Витамат сделан из безопасных материалов – мы используем только медицинские пластик и
               сталь. Внутри поддерживаем оптимальные температуру и влажность для хранения БАДов –

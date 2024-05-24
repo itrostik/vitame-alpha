@@ -25,7 +25,10 @@
 }
 .shadow {
   position: absolute;
-  bottom: -50px;
+  bottom: -35px;
+  border-radius: 0.5rem;
+  opacity: 70%;
+  width: 105%;
 }
 .bg {
   width: 618px;

@@ -8,9 +8,14 @@
 }
 
 .link {
-  @include text-50;
+  font-size: 0.95rem;
+  font-weight: 500;
 
-  padding: .625rem .875rem;
+  @media (min-width: 1100px) {
+    font-size: 1rem;
+  }
+
+  padding: 0.625rem 0.875rem;
   text-transform: uppercase;
 
   transition: 200ms all ease-in-out;
@@ -23,10 +28,10 @@
 .button {
   @include text-65;
 
-  background: #1280E080;
+  background: #1280e080;
   border-radius: 500rem;
   color: var(--primary-color-10);
-  padding: .625rem .875rem;
+  padding: 0.625rem 0.875rem;
   text-transform: uppercase;
 
   transition: 200ms all ease-in-out;

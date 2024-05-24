@@ -26,11 +26,9 @@
 }
 
 .b2b {
-  padding: 200px 0 0;
+  background: 50% 27% / 191px 438px no-repeat fixed #fbfbfb url('/images/b2b-top-mobile.png');
 
-  background: 50% 250px / 191px 438px no-repeat fixed #fbfbfb url('/images/b2b-top-mobile.png');
-
-  height: min(105vh, 45rem);
+  height: min(105vh, 38rem);
 
   @media (max-width: 768px) {
     background-attachment: fixed;

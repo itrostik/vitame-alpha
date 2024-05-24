@@ -8,7 +8,7 @@
 }
 
 .content {
-  @include column(1.0rem);
+  @include column(1.85rem);
 }
 
 .mobile {
@@ -17,61 +17,187 @@
   }
 }
 
+.overlay {
+  @media (min-width: 768px) {
+    will-change: transform;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: blur(0.25rem);
+  }
+}
+
 .bottom {
-  background: var(--primary-color-10);
+  will-change: transform;
+  background: 58% 100% / cover no-repeat url('/images/bottom.jpg');
 
+  overflow: hidden;
+  position: relative;
   height: fit-content;
-  border-radius: .9375rem;
-
-  display: flex;
-  flex-direction: column-reverse;
+  margin-inline: -1.5rem;
+  padding-bottom: 3.25rem;
 
   @media (min-width: 768px) {
-    display: grid;
-    align-items: center;
-    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 13rem;
   }
 
+  @media (min-width: 992px) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 8.5rem;
+    padding-bottom: 13rem;
+  }
+
+  @media (min-width: 1600px) {
+    margin-inline: -5.25rem;
+    padding-bottom: 17rem;
+  }
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   & img {
-    width: 100%;
-    object-fit: cover;
+    width: 155px;
+    height: 340px;
 
-    border-top-right-radius: .9375rem;
-    border-top-left-radius: .9375rem;
-
-    @media (min-width: 768px) {
-      border-top-right-radius: .9375rem;
-      border-bottom-right-radius: .9375rem;
-
-      border-top-left-radius: 0;
+    @media (min-width: 992px) {
+      height: 630px;
+      width: 270px;
+      object-fit: cover;
+      color: transparent;
+      position: absolute;
+      right: 5rem;
+      top: 0.5rem;
     }
   }
 }
 
 .item {
-  @include column(1.0rem);
+  @include column(1rem);
 
-  padding: 1.25rem 1.5rem 1.5rem;
+  padding: 7.25rem 1.5rem 0;
+  width: min(100%, 50rem);
 
   @media (min-width: 992px) {
-    padding-inline: 2.0rem 4.75rem;
+    padding-inline: 2rem 4.75rem;
+    paddin-bottom: 2.5rem;
+  }
+
+  @media (min-width: 1600px) {
+    width: min(100%, 55rem);
+  }
+}
+
+.content {
+  will-change: transform;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  align-items: center;
+  position: relative;
+  @media (min-width: 992px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.topDecoration {
+  will-change: transform;
+  background: linear-gradient(180deg, white, rgba(255, 255, 255, 90%));
+  backdrop-filter: blur(0.15rem);
+  height: 5rem;
+  position: absolute;
+  top: -1px;
+  right: 0;
+  left: 0;
+  z-index: 15;
+  bottom: 0;
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+
+  & div {
+    width: 100%;
+    height: 100%;
+    background: var(--transparent-color-15);
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+  }
+}
+
+.bottomDecoration {
+  will-change: transform;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 15%), white);
+  backdrop-filter: blur(0.5rem);
+  height: 5rem;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  z-index: 15;
+
+  & div {
+    width: 100%;
+    height: 100%;
+    background: var(--transparent-color-15);
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
   }
 }
 
 .heading {
-  @include text-90;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 130%;
 
-  color: var(--identify-color-5);
+  @media (min-width: 768px) {
+    font-size: 48px;
+  }
+
+  color: var(--primary-color-5);
+  text-transform: uppercase;
+}
+
+.mobile {
+  @media (min-width: 992px) {
+    display: none;
+  }
+}
+
+.desktop {
+  display: none;
+
+  @media (min-width: 992px) {
+    display: block;
+  }
 }
 
 .button {
-  @include text-50;
+  font-size: 18px;
 
-  padding: .875rem 1.5rem;
-  border-radius: .625rem;
+  @media (min-width: 992px) {
+    position: static;
+    width: fit-content;
+    transform: none;
+    padding: 21px 47px;
+  }
+
+  z-index: 25;
+  text-transform: uppercase;
+  padding: 20px 1.5rem;
+  border-radius: 0.625rem;
   color: var(--primary-color-10);
   background: var(--identify-color-5);
-  width: fit-content;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  bottom: 3.25rem;
 
   transition: 200ms all ease-in-out;
 

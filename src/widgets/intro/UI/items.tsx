@@ -4,7 +4,7 @@ import styles from './styles.module.scss'
 import cn from 'classnames'
 import { useRouter } from 'next/navigation'
 
-const Items = ({ page }: { page: 'home' | 'products' | 'identity' | 'b2b' }) => {
+const Items = ({ page }: { page: 'home' | 'products' | 'identity' | 'partnership' }) => {
   const router = useRouter()
 
   return (
@@ -27,7 +27,7 @@ const Items = ({ page }: { page: 'home' | 'products' | 'identity' | 'b2b' }) => 
           </h1>
         </>
       )}
-      {page === 'b2b' && (
+      {page === 'partnership' && (
         <div className={styles.content}>
           <div className={styles.container}>
             <h1 className={styles.heading}>индивидуальный набор витаминов всегда под рукой</h1>

@@ -16,50 +16,58 @@ import handleLinkClick from '@/shared/utils/handle-link-click'
 import { usePathname, useRouter } from 'next/navigation'
 import useFormStore from '@/widgets/form/model/store'
 
+export const links = [
+  {
+    href: '#reason',
+    name: 'О нас'
+  },
+  {
+    href: '#approach',
+    name: 'Научный подход'
+  },
+  {
+    href: '/products',
+    name: 'Продукты'
+  },
+  {
+    href: '/blog',
+    name: 'Блог'
+  },
+  {
+    href: '/partnership',
+    name: 'Партнерам'
+  }
+]
+
 const Navigation = () => {
-    const { isNavbarHidden, setIsNavbarHidden } = useNavbarStore()
+  const { isNavbarHidden, setIsNavbarHidden } = useNavbarStore()
 
-    const { setIsFormHidden } = useFormStore()
+  const { setIsFormHidden } = useFormStore()
 
-    const links = [
-        {
-            href: '#reason',
-            name: 'О нас'
-        },
-        {
-            href: '#approach',
-            name: 'Научный подход'
-        },
-        {
-            href: '/products',
-            name: 'Продукты'
-        }
-    ]
+  const router = useRouter()
+  const pathname = usePathname()
 
-    const router = useRouter()
-    const pathname = usePathname()
-
-    return (
-        <nav className={cn(styles.navbar, { [styles.hidden]: isNavbarHidden })}>
-            <div className={styles.links}>
-                {links.map((link, index) => {
-                    return (
-                        <Link
-                            key={index}
-                            className={styles.link}
-                            href={link.href}
-                            onClick={(event) => handleLinkClick(event, link.href, pathname, router)}
-                        >
-                            {link.name}
-                        </Link>
-                    )
-                })}
-                <button className={styles.button} onClick={() => setIsFormHidden(false)}>
-                    Поставить витамат
-                </button>
-            </div>
-        </nav>
-    )
+  return (
+    <nav className={cn(styles.navbar, { [styles.hidden]: isNavbarHidden })}>
+      <div className={styles.links}>
+        {links.map((link, index) => {
+          return (
+            <Link
+              key={index}
+              className={styles.link}
+              href={link.href}
+              onClick={(event) => handleLinkClick(event, link.href, pathname, router)}
+            >
+              {link.name}
+            </Link>
+          )
+        })}
+        <button className={styles.button} onClick={() => setIsFormHidden(false)}>
+          Поставить витамат
+        </button>
+      </div>
+    </nav>
+  )
 }
 
 export default Navigation

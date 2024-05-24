@@ -27,7 +27,10 @@
 }
 .shadow {
   position: absolute;
-  bottom: -40px;
+  bottom: -15px;
+  border-radius: 0.5rem;
+  opacity: 70%;
+  width: 85%;
   @media (max-width: 1200px) {
     width: 900px;
   }

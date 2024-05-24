@@ -3,7 +3,7 @@ import Info from '@/widgets/info/UI'
 import Review from '@/widgets/review/UI'
 import About from '@/widgets/about/UI'
 import Program from '@/widgets/program/UI'
-import styles from '@/shared/styles/pages/b2b.module.scss'
+import styles from '@/shared/styles/pages/partnership.module.scss'
 import Items from '@/widgets/intro/UI/items'
 import Vitamit from '@/widgets/vitamit/UI'
 import VitamitMobile from '@/widgets/vitamit-mobile/UI'
@@ -19,7 +19,7 @@ import Cookie from '@/widgets/cookie/UI'
 import Intro from '@/widgets/intro/UI'
 import Footer from '@/shared/UI/footer'
 
-export default function B2B() {
+const Partnership = () => {
   const { isFormHidden, setIsFormHidden } = useFormStore()
   const { isNotificationHidden, setIsNotificationHidden } = useNotificationStore()
   return (
@@ -33,10 +33,10 @@ export default function B2B() {
         <Notification />
       </Modal>
       <Cookie />
-      <Intro page='b2b' />
+      <Intro page='partnership' />
       <main className={styles.main}>
         <div className={styles.mobile}>
-          <Items page='b2b' />
+          <Items page='partnership' />
         </div>
         <About />
         <Info variantWithButton />
@@ -44,10 +44,12 @@ export default function B2B() {
         <Vitamit />
         <VitamitMobile />
         <Info />
-        <Review />
+        {/*<Review />*/}
         <Info variantWithButton />
       </main>
       <Footer />
     </div>
   )
 }
+
+export default Partnership

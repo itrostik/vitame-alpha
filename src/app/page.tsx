@@ -16,26 +16,28 @@ import People from '@/widgets/people/UI'
 import Priority from '@/widgets/priority/UI'
 import FAQ from '@/widgets/FAQ/UI'
 import News from '@/widgets/news/UI'
+import Review from '@/widgets/review/UI'
 
 const Home = () => {
-    return (
-        <Wrapper page='home'>
-            <div className={styles.mobile}>
-                <Items page='home' />
-            </div>
+  return (
+    <Wrapper page='home'>
+      <div className={styles.mobile}>
+        <Items page='home' />
+      </div>
 
-            <Problem />
-            <Quality />
-            <Algorithm />
-            <Reason />
-            <Priority />
-            <Products />
-            <Approach />
-            <People />
-            <FAQ />
-            <News />
-        </Wrapper>
-    )
+      <Problem />
+      <Quality />
+      <Algorithm />
+      <Reason />
+      <Priority />
+      <Products />
+      <Approach />
+      <People />
+      <Review />
+      <FAQ />
+      <News />
+    </Wrapper>
+  )
 }
 
 export default Home

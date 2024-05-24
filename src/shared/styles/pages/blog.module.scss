@@ -1,0 +1,156 @@
+.main {
+  @include column(5.25rem);
+
+  overflow: hidden;
+  backdrop-filter: blur(1.5rem);
+  background: var(--transparent-color-15);
+  padding: 30px 16px;
+  border-radius: 2.5rem;
+  transform: translateY(-4.25rem);
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  @media (min-width: 768px) {
+    border-radius: 4.5rem;
+  }
+
+  @media (min-width: 1600px) {
+    padding-inline: 5.25rem;
+  }
+}
+
+.desktop {
+  display: none;
+
+  @media (min-width: 992px) {
+    display: block;
+  }
+}
+
+.mobile {
+  @media (min-width: 992px) {
+    display: none;
+  }
+}
+
+.heading {
+  color: #155fa0;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  text-transform: uppercase;
+  padding-left: 10px;
+
+  @media (min-width: 992px) {
+    font-size: 36px;
+    padding-left: 32px;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cards {
+  display: grid;
+  gap: 16px;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.link {
+  color: #363847;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  padding-block: 2px;
+  border-bottom: 1px solid #000;
+  width: fit-content;
+  transition: 200ms all ease-in-out;
+
+  &:hover {
+    color: #1b78cb;
+    border-color: #1b78cb;
+  }
+}
+
+.name {
+  color: #155fa0;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+}
+
+.description {
+  overflow: hidden;
+  color: #363847;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  height: 60px;
+}
+
+.article {
+  transition: 200ms all ease-in-out;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 15px;
+  background: #fff;
+
+  &:hover {
+    scale: 95%;
+  }
+
+  & img {
+    border-radius: 16px;
+    width: 100%;
+    aspect-ratio: 5 / 4;
+    object-fit: cover;
+    object-position: center;
+    flex: 1;
+  }
+
+  @media (min-width: 768px) {
+    padding: 24px;
+  }
+}
+
+.bottom {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.block {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+
+  & span {
+    color: #828990;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+  }
+}
