@@ -34,7 +34,7 @@ const Page = () => {
   // @ts-ignore
   return (
     <div>
-      <Header />
+      {isFormHidden && <Header />}
       <Navigation />
       <Modal isHidden={isFormHidden} setIsHidden={setIsFormHidden}>
         <Form />

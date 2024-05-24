@@ -24,7 +24,7 @@ const Partnership = () => {
   const { isNotificationHidden, setIsNotificationHidden } = useNotificationStore()
   return (
     <div className={styles.wrapper}>
-      <Header />
+      {isFormHidden && <Header />}
       <Navigation />
       <Modal isHidden={isFormHidden} setIsHidden={setIsFormHidden}>
         <Form />

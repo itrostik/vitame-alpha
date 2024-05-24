@@ -2,7 +2,10 @@
   background: 50% 0% / 150% no-repeat fixed #ebedf0 url('/images/products-mobile-intro.jpg');
 
   height: min(105vh, 30rem);
-
+  @media (max-width: 500px) {
+    background-position: 50% -10%;
+    height: 400px;
+  }
   @media (min-width: 576px) {
     background-size: 100%;
   }
