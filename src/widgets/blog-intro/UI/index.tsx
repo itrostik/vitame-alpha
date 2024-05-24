@@ -15,7 +15,13 @@ const BlogIntro = () => {
         <div className={styles.wrapper}>
           <h1 className={cn(styles.heading, styles.desktop)}>Блог</h1>
           <div className={styles.shell}>
-            <Image src='/images/blog-intro.jpg' alt='' width={728} height={499} />
+            <Image
+              src='/images/blog-intro.jpg'
+              alt=''
+              width={728}
+              height={499}
+              className={styles.image}
+            />
             <div />
           </div>
         </div>

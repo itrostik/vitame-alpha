@@ -1,7 +1,9 @@
 .intro {
   height: clamp(20rem, 105vh, 35rem);
   position: relative;
-
+  @media (max-width: 500px) {
+    height: 400px;
+  }
   & > div {
     height: 100%;
   }
@@ -9,6 +11,12 @@
 
 .shell {
   overflow: hidden;
+}
+.image {
+  @media (max-width: 500px) {
+    width: 500px;
+    padding-bottom: 40px;
+  }
 }
 
 .wrapper {

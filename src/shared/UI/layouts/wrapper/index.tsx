@@ -32,7 +32,7 @@ const Wrapper = ({ children, page }: Props) => {
 
   return (
     <div className={styles.wrapper}>
-      <Header />
+      {isFormHidden && <Header />}
       <Navigation />
       <Modal isHidden={isFormHidden} setIsHidden={setIsFormHidden}>
         <Form />
