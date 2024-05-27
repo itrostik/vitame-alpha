@@ -2,8 +2,6 @@ import styles from '@/shared/styles/pages/home.module.scss'
 
 import Wrapper from '@/shared/UI/layouts/wrapper'
 
-import Modal from '@/widgets/modal/UI/modal'
-
 import Items from '@/widgets/intro/UI/items'
 
 import Problem from '@/widgets/problem/UI'
@@ -16,7 +14,6 @@ import People from '@/widgets/people/UI'
 import Priority from '@/widgets/priority/UI'
 import FAQ from '@/widgets/FAQ/UI'
 import News from '@/widgets/news/UI'
-import Review from '@/widgets/review/UI'
 
 const Home = () => {
   return (
