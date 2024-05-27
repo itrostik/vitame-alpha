@@ -42,28 +42,28 @@ const list: {
   }
 ]
 
-// const Review = () => {
-//   return (
-//     // <Slider heading={'Отзывы клиентов'}>
-//     //   {list.map((item, i) => {
-//     //     return (
-//     //       <div key={i} className={styles.item}>
-//     //         <Image
-//     //           src={'/images/' + item.image}
-//     //           alt='Person'
-//     //           width={185}
-//     //           height={185}
-//     //           className={styles.image}
-//     //         />
-//     //         <div className={styles.right}>
-//     //           <div className={styles.name}>{item.name}</div>
-//     //           <div className={styles.company}>{item.company}</div>
-//     //           <div className={styles.content}>{item.content}</div>
-//     //         </div>
-//     //       </div>
-//     //     )
-//     //   })}
-//     // </Slider>
-//   )
-// }
-// export default Review
+const Review = () => {
+  return (
+    <Slider heading={'Отзывы клиентов'}>
+      {list.map((item, i) => {
+        return (
+          <div key={i} className={styles.item}>
+            <Image
+              src={'/images/' + item.image}
+              alt='Person'
+              width={185}
+              height={185}
+              className={styles.image}
+            />
+            <div className={styles.right}>
+              <div className={styles.name}>{item.name}</div>
+              <div className={styles.company}>{item.company}</div>
+              <div className={styles.content}>{item.content}</div>
+            </div>
+          </div>
+        )
+      })}
+    </Slider>
+  )
+}
+export default Review
