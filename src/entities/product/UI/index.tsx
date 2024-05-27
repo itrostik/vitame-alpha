@@ -24,7 +24,7 @@ const Product = ({ product }: Props) => {
   const [selectedIndex, setSelectedIndex] = useState(0)
   const [scrollSnaps, setScrollSnaps] = useState<number[]>([])
   const [autoplay, setAutoplay] = useState<NodeJS.Timeout | null>(null)
-
+  const returnBack = useRef<NodeJS.Timeout | null>(null)
   const handleClick = () => {
     router.push(`/products/${product.id}`)
   }
@@ -34,6 +34,9 @@ const Product = ({ product }: Props) => {
   }
 
   const startAutoplay = () => {
+    if (returnBack.current) {
+      clearTimeout(returnBack.current)
+    }
     if (emblaApi && !autoplay) {
       if (emblaApi.canScrollNext()) {
         emblaApi.scrollNext()
@@ -54,8 +57,14 @@ const Product = ({ product }: Props) => {
   }
 
   const stopAutoplay = () => {
+    if (returnBack.current) {
+      clearTimeout(returnBack.current)
+    }
     if (autoplay) {
       clearInterval(autoplay)
+      returnBack.current = setTimeout(() => {
+        emblaApi.scrollTo(0)
+      }, 3000)
       setAutoplay(null)
     }
   }

@@ -111,11 +111,9 @@ const FAQ = () => {
         <div className={styles.questions}>
           {items.map((item, index) => (
             <div key={item.id} className={styles.item}>
-              <div className={styles.top}>
+              <div className={styles.top} onClick={() => handleClick(index)}>
                 <h3 className={styles.question}>{item.question}</h3>
-                <button className={styles.button} onClick={() => handleClick(index)}>
-                  {isHidden[index] ? <Plus /> : <Minus />}
-                </button>
+                <button className={styles.button}>{isHidden[index] ? <Plus /> : <Minus />}</button>
               </div>
               <motion.div
                 className={cn(styles.answer, { [styles.opened]: !isHidden[index] })}

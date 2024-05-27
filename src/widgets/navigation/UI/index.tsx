@@ -48,7 +48,7 @@ const Navigation = () => {
   const pathname = usePathname()
 
   return (
-    <nav className={cn(styles.navbar, { [styles.hidden]: isNavbarHidden })}>
+    <nav className={cn(styles.navbar, { [styles.vis]: !isNavbarHidden })}>
       <div className={styles.links}>
         {links.map((link, index) => {
           return (

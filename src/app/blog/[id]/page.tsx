@@ -91,7 +91,6 @@ const Article = ({ params }: { params: { id: string } }) => {
 
                 if (item.items) {
                   const Tag = item.tag as keyof JSX.IntrinsicElements
-
                   return (
                     <Tag>
                       {item.items.map((listItem) => {

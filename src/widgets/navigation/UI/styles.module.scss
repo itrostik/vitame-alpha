@@ -7,26 +7,27 @@
   bottom: 0;
   right: 0;
   background: var(--transparent-color-25);
-  backdrop-filter: blur(.5rem);
+  backdrop-filter: blur(56px);
   z-index: 100;
-  padding: 8.5rem 2.0rem .5rem;
+  padding: 8.5rem 2rem 0.5rem;
   transition: 500ms all ease-in-out;
-}
-
-.hidden {
   opacity: 0;
   transform: translateY(-100%);
 }
+.vis {
+  transform: translateY(0);
+  opacity: 1;
+}
 
 .links {
-  @include column(.5rem);
+  @include column(0.5rem);
 }
 
 .link {
   @include text-50;
 
   color: var(--additional-color-25);
-  padding: .625rem;
+  padding: 0.625rem;
   text-transform: uppercase;
 
   transition: 200ms all ease-in-out;
@@ -39,10 +40,10 @@
 .button {
   @include text-65;
 
-  background: #1280E080;
+  background: #1280e080;
   border-radius: 500rem;
   color: var(--primary-color-5);
-  padding: .45rem .875rem;
+  padding: 0.45rem 0.875rem;
   text-transform: uppercase;
   width: fit-content;
   transition: 200ms all ease-in-out;

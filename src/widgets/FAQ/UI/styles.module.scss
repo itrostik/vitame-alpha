@@ -1,9 +1,9 @@
 .description {
-  @include column(.5rem);
+  @include column(0.5rem);
 }
 
 .questions {
-  @include column(.5rem);
+  @include column(0.5rem);
 
   overflow: hidden;
 }
@@ -11,7 +11,7 @@
 .item {
   background: var(--primary-color-10);
   padding: 1.5rem;
-  border-radius: .9375rem;
+  border-radius: 0.9375rem;
 
   width: 100%;
 
@@ -19,6 +19,7 @@
 }
 
 .top {
+  cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;

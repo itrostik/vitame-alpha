@@ -4,7 +4,7 @@
 }
 
 .main {
-  @include column(5.25rem);
+  @include column(110px);
 
   overflow: hidden;
   backdrop-filter: blur(1.5rem);

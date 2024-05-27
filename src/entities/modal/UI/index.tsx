@@ -206,9 +206,9 @@ const ModalProduct = ({ product }: { product: IProduct }) => {
             <div className={styles.questions}>
               {tabsMobile.map((item, index) => (
                 <div key={item.title} className={styles.item52}>
-                  <div className={styles.top52}>
+                  <div className={styles.top52} onClick={() => handleClick(index)}>
                     <h3 className={styles.question52}>{item.title}</h3>
-                    <button className={styles.button52} onClick={() => handleClick(index)}>
+                    <button className={styles.button52}>
                       {isHidden[index] ? <Plus /> : <Minus />}
                     </button>
                   </div>

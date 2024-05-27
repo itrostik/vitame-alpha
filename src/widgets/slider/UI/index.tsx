@@ -43,11 +43,13 @@ const list: {
 ]
 
 const Slider = ({ heading, children }: { heading: any; children: ReactNode }) => {
-  const [emblaRef, emblaApi] = useEmblaCarousel()
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    startIndex: 0,
+    slidesToScroll: 1
+  })
 
   const { prevBtnDisabled, nextBtnDisabled, onPrevButtonClick, onNextButtonClick } =
     usePrevNextButtons(emblaApi)
-
   return (
     <section className={styles.section}>
       <div className={styles.container}>

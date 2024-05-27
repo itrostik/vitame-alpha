@@ -33,7 +33,7 @@ const Home = () => {
       <Products />
       <Approach />
       <People />
-      <Review />
+      {/*<Review />*/}
       <FAQ />
       <News />
     </Wrapper>
