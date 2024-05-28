@@ -18,6 +18,7 @@ import useNotificationStore from '@/widgets/notification/model/store'
 import Cookie from '@/widgets/cookie/UI'
 import Intro from '@/widgets/intro/UI'
 import Footer from '@/shared/UI/footer'
+import News from '@/widgets/news/UI'
 
 const Partnership = () => {
   const { isFormHidden, setIsFormHidden } = useFormStore()
@@ -45,7 +46,7 @@ const Partnership = () => {
         <VitamitMobile />
         <Info />
         {/*<Review />*/}
-        <Info variantWithButton />
+        <News />
       </main>
       <Footer />
     </div>
