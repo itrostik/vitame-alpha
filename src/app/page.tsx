@@ -23,16 +23,16 @@ const Home = () => {
       </div>
 
       <Problem />
-      <Quality />
+      {/*<Quality />*/}
       {/*<Algorithm />*/}
       {/*<Reason />*/}
       {/*<Priority />*/}
-      <Products />
-      <Approach />
-      <People />
+      {/*<Products />*/}
+      {/*<Approach />*/}
+      {/*<People />*/}
       {/*<Review />*/}
-      <FAQ />
-      <News />
+      {/*<FAQ />*/}
+      {/*<News />*/}
     </Wrapper>
   )
 }
