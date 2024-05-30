@@ -24,15 +24,15 @@ const Home = () => {
 
       <Problem />
       <Quality />
-      <Algorithm />
+      {/*<Algorithm />*/}
       <Reason />
       {/*<Priority />*/}
       {/*<Products />*/}
       {/*<Approach />*/}
-      {/*<People />*/}
+      <People />
       {/*<Review />*/}
-      {/*<FAQ />*/}
-      {/*<News />*/}
+      <FAQ />
+      <News />
     </Wrapper>
   )
 }
