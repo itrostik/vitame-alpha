@@ -64,7 +64,7 @@ const Product = ({ product }: Props) => {
       clearInterval(autoplay)
       returnBack.current = setTimeout(() => {
         emblaApi.scrollTo(0)
-      }, 3000)
+      }, 0)
       setAutoplay(null)
     }
   }

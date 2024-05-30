@@ -118,7 +118,15 @@ const People = () => {
 
               return (
                 <div key={index} className={styles.card}>
-                  <Image className={styles.image} src={src} alt={alt} height={285} width={270} />
+                  <Image
+                    className={styles.image}
+                    src={src}
+                    alt={alt}
+                    height={285}
+                    width={270}
+                    priority={true}
+                    loading={'eager'}
+                  />
                   <div className={styles.content}>
                     <h3 className={styles.heading}>{card.name}</h3>
                     <div className={styles.description}>
