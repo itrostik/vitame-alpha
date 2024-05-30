@@ -25,8 +25,8 @@ const Home = () => {
       <Problem />
       <Quality />
       <Algorithm />
-      {/*<Reason />*/}
-      {/*<Priority />*/}
+      <Reason />
+      <Priority />
       {/*<Products />*/}
       {/*<Approach />*/}
       {/*<People />*/}
